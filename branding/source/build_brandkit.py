@@ -85,7 +85,7 @@ end()
 start('05 / Typography');title('TWO FAMILIES. DISTINCT ROLES.','CONFIDENT TYPE.','Bubbly curves.')
 rect(44,253,440,307,'baby-pink',25,'blue');txt('DM SANS',72,284,43,'Black');txt('BLACK / 900',74,348,11,'Bold');para('Short, bold, tightly spaced headlines. Italic in the website for a sporty Y2K fashion feel.',74,391,362,17);txt('BODY / 400 + 600',74,500,11,'Bold')
 rect(510,253,446,307,'white',25,'blue');script('Lobster Two',540,294,59,'blue');label('BOLD ITALIC / 700',543,383);para('The signature script. Use for the wordmark and one expressive phrase per section. Never for addresses, body copy, or small labels.',543,420,360,16)
-para('Mobile scale: 47 px bold hero + 78 px script; 44 px section titles; 12–13 px body; 10–12 px actions. Adjust to fit the screen without squeezing words. Use generous line-height for practical copy.',44,594,904,12)
+para('Mobile scale: 36–47 px bold hero + 59–78 px script; 40 px section titles; 14–16 px body; 14–15 px actions. Adjust to fit the screen without squeezing words. Use generous line-height for practical copy.',44,594,904,12)
 end()
 start('06 / Graphic language');title('THE STICKER DRAWER','A LITTLE SPARKLE.','A lot of restraint.')
 for x in [44,356,668]:rect(x,249,286,259,'baby-pink',24,'blue')
@@ -103,7 +103,7 @@ start('08 / Mobile first');title('THE FIRST SCREEN IS THE CAMPAIGN','MADE FOR TH
 phone=R.parent/'website-mockup/previews/mobile-first-screen.png'
 rect(643,70,279,562,'blue',35);rect(650,77,265,548,'white',29)
 if phone.exists():image(phone,659,91,247,521)
-for y,h,b in [(267,'01 / One complete opening','Brand, message, artwork, and visit action read together without a giant headline taking over.'),(379,'02 / Thumb-friendly actions','A clear visit button, readable labels, and an easy mobile menu. No permanent bar over the hero.'),(492,'03 / Shorter, richer scrolling','Compact drink cards, a strong graphic story moment, and immediately usable location cards.')]:
+for y,h,b in [(267,'01 / One complete opening','Readable brand copy and a full-width visit action appear before the artwork, with no giant headline taking over.'),(379,'02 / Thumb-friendly actions','Larger action labels, a clear mobile menu, and useful addresses. The visit bar stays clear of the hero, locations and footer.'),(492,'03 / Shorter, richer scrolling','Compact drink cards, a strong graphic story moment, and immediately usable location cards.')]:
  label(h,44,y);para(b,44,y+29,500,16)
 end()
 start('09 / Desktop translation');label('SAME IDENTITY. MORE ROOM.',44,80);txt('ONE DESIGN LANGUAGE.',44,109,44,'Black')

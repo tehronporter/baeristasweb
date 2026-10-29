@@ -11,7 +11,7 @@ assets=dest/'assets';assets.mkdir(exist_ok=True)
 for obsolete in assets.iterdir():
  if obsolete.is_file():obsolete.unlink()
 for file in (source/'assets').iterdir():
- if file.suffix in ['.svg','.ttf','.txt']:
+ if file.suffix in ['.svg','.png','.ttf','.txt']:
   shutil.copy2(file,assets/file.name)
 (dest/'.nojekyll').touch()
 print('Prepared docs/ for GitHub Pages.')

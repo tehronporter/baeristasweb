@@ -39,3 +39,7 @@ GitHub Pages serves `main:/docs`. After website changes run `python3 scripts/pre
 The visit bar is hidden over the hero and while location cards are visible. It appears between those sections on phones, with consistent blue-and-white styling. Drink cards use compact horizontal layouts on phones. All normal text uses blue on white/baby pink, or white on blue. Pink lettering is reserved for large graphic statements and proposed wordmarks.
 
 No fictional prices, reviews, employees, schedules, recipes, order endpoints or contact details are added. The two directions links use researched addresses; operating details still require owner confirmation. See `RESEARCH.md`, `ASSETS.md`, `OWNER_CHECKLIST.md`, and `VALIDATION.md`.
+
+## Mobile corrections and sharing
+
+The updated mobile design moves the main action before the artwork, increases useful text sizes, widens drink-card copy, removes favorite-like decorative controls, and keeps the floating visit bar clear of the closing section and footer. Sharing now has a branded 1200×630 Open Graph/Twitter image and matching browser/Apple icons. `branding/source/build_social_assets.py` generates the outlined vector sharing assets. GitHub Pages preparation includes PNG exports as well as SVGs and fonts.

@@ -23,3 +23,11 @@ Rebuilt as a new 12-page guide using Lobster Two Bold Italic and DM Sans, the th
 This is an intentionally illustrative preview. Actual company photography and final operational details can be supplied during the production build. No checkout, forms, fabricated menu prices, staff biographies, reviews or open-now status are introduced. Static HTML/CSS/JS requires no framework typecheck or production build.
 
 GitHub Pages serves the public review from `main:/docs`. Deployment is verified after publication.
+
+## Mobile readability and sharing fixes
+
+The supplied mobile screenshot exposed overly small practical text, a narrow card-copy column, a late primary action, decorative hearts that suggested inactive favorite controls, and a visit bar that could cover the closing/footer. The correction moves the full-width primary action above the illustration; uses 14–16 px copy, 14–15 px action labels, 16 px addresses and 12 px supporting notes; gives category copy 65% of the card; removes false controls, a crowded hero sticker and repeated story copy; and hides the floating bar whenever the hero, locations, closing or footer is visible. The mobile breakpoint now covers widths through 700 px.
+
+Verified the revised opening in Chrome and WebKit at 390×844, with touch/mobile emulation: no overflow, and the primary visit action ends at approximately 432 px within the 844 px viewport. The ten-width layout checks, Escape/focus behavior, menu selection behavior, and contextual bar tests pass. Updated full-page captures use reduced-motion mode to prevent transient scrolling/opacity effects from appearing in the screenshots.
+
+Sharing assets now include a 1200×630 branded PNG card, explicit Open Graph and Twitter large-image metadata with absolute HTTPS asset URLs, an SVG B monogram favicon, 32 px PNG fallback, and 180 px Apple touch icon. Image dimensions and referenced files are checked locally and after deployment. External apps may cache older link previews; no claim of forcing third-party caches to refresh is made.

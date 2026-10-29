@@ -34,4 +34,7 @@ with zipfile.ZipFile(out/'Baeristas_Website_Current_Colorway.zip','w',zipfile.ZI
 shutil.copy2(out/'Baeristas_Brand_Kit_Current_Colorway.pdf',out/'Baeristas_Brand_Kit_Y2K.pdf')
 shutil.copy2(out/'Baeristas_Review_Package_Current_Colorway.zip',out/'Baeristas_Review_Package_Y2K.zip')
 shutil.copy2(out/'Baeristas_Website_Current_Colorway.zip',out/'Baeristas_Website_Y2K.zip')
-print('Y2K PDF, previews, full review ZIP and standalone website ZIP refreshed.')
+shutil.copy2(out/'Baeristas_Brand_Kit_Y2K.pdf',out/'Baeristas_Brand_Kit_Mobile_Fixes.pdf')
+shutil.copy2(out/'Baeristas_Review_Package_Y2K.zip',out/'Baeristas_Review_Package_Mobile_Fixes.zip')
+shutil.copy2(out/'Baeristas_Website_Y2K.zip',out/'Baeristas_Website_Mobile_Fixes.zip')
+print('Mobile-corrected PDF, previews, full review ZIP and standalone website ZIP refreshed.')

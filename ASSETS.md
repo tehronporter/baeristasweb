@@ -21,3 +21,7 @@ No company photography, staff portraits, storefront photos, magazine photos or s
 - Both use the SIL Open Font License. Original font copyrights and license text are included with brand files and the standalone website assets.
 
 All public website fonts are local. The SVG wordmarks and cup graphics contain outlined lettering. Source font files are included for editable design work. Typography and logo treatments remain proposals, with no formal trademark clearance claimed.
+
+## Social sharing and app icon
+
+`website-mockup/assets/social-share.png` is an original 1200×630 branded social card. `social-share.svg` is the editable, font-independent outlined source. `favicon.svg` uses a Baeristas script B monogram; `favicon-32.png` and `apple-touch-icon.png` are browser-rendered 32×32 and 180×180 variants. All use the same three-color system and white. Generate vector sources with `branding/source/build_social_assets.py`; raster exports are rendered from those SVGs in a browser. Open Graph/Twitter metadata reference the PNG by its actual GitHub Pages URL. No external social account or handle is invented.
