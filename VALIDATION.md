@@ -5,8 +5,8 @@
 - Generated 16-page vector PDF using ReportLab with embedded fonts.
 - Rendered every page and inspected a contact sheet.
 - Checked text bounding boxes: no text outside page boundaries.
-- Adjusted the creative-direction panel after visual inspection.
-- Verified key small-text color pairs: espresso/cream, berry/cream, cream/cherry pink exceed 4.5:1.
+- Updated all 16 pages to the current pink-and-blue colorway and inspected refreshed renders.
+- Verified key small-text color pairs: navy/paper, muted/paper, paper/magenta exceed 4.5:1.
 
 ## Website mockup
 
@@ -24,3 +24,7 @@ Tested in headless installed Google Chrome using Playwright at 390×1000, 768×1
 - Website remains a review mockup. No production build pipeline or backend exists, so framework lint/type/build checks are not applicable. Current business facts, real photography and phone-based device behavior need owner review before public launch.
 
 No public deployment was performed.
+
+## Current colorway refresh
+
+Repeated responsive browser and navigation checks after recoloring. Key normal-text pairs: navy/paper 11.38:1, muted/paper 10.50:1, muted/bubblegum 5.79:1, navy/sky-blue 4.76:1, paper/magenta 6.14:1. Category labels use navy so they also pass on the blue panel. Focus outlines use navy. Reference hot pink is reserved for artwork/accent use; it is not used as a small-text background. All PDF pages, full-page screenshots and downloadable packages were regenerated.

@@ -1,10 +1,13 @@
 :root {
-  --brand-cream: #FFF8F2;
-  --brand-blush: #F7DCE4;
-  --brand-cherry-pink: #C92E64;
-  --brand-espresso: #34201F;
-  --brand-muted-berry: #78535E;
-  --brand-border: #E7CDD2;
+  --brand-paper: #FFF8FC;
+  --brand-bubblegum: #F4A4D0;
+  --brand-hot-pink: #F72796;
+  --brand-sky-blue: #56ACE2;
+  --brand-deep-blue: #07569B;
+  --brand-magenta: #B51469;
+  --brand-navy: #143860;
+  --brand-muted: #343B58;
+  --brand-border: #E8AED0;
   --font-display: "Cormorant Garamond", serif;
   --font-body: "DM Sans", sans-serif;
 }

@@ -1,6 +1,6 @@
 # Baeristas — proposed branding and website mockup
 
-The work follows the requested order: research, a refreshed branding kit PDF, then a local responsive website mockup. This is a new proposed identity rather than an existing official brand manual.
+The work follows the requested order: research, a refreshed branding kit PDF, then a local responsive website mockup. The visual system now follows the user-supplied current hot-pink, bubblegum-pink, sky-blue and deep-blue colorway. Typography and logo treatments remain proposals rather than an existing official brand manual.
 
 ## Review
 
@@ -32,3 +32,7 @@ Open http://127.0.0.1:4173 . No install/build step, API keys, or online font ser
 The website includes drink categories, brand story, both reported stands and real Maps directions URLs. Menu products/prices, reviews, opening hours, ordering links, contact details and unresolved social links are not invented. NE details need owner confirmation. Illustrations are visibly conceptual and a short drinks note makes that explicit. Preview is excluded from search indexing. No production structured data or canonical domain is guessed.
 
 See `RESEARCH.md`, `ASSETS.md`, `OWNER_CHECKLIST.md` and `VALIDATION.md`. No site was registered or deployed.
+
+## Current palette update
+
+All PDF pages, logos, symbols, patterns, packaging/social concepts, website illustrations, browser theme color, responsive previews and review downloads have been regenerated with the reference colorway. Color tokens and provenance live in `branding/palette.json` and `ASSETS.md`. The site remains an unpublished mockup.

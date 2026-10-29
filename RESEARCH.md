@@ -32,4 +32,8 @@ Checked October 29, 2026 (America/Los_Angeles). The supplied master prompt was t
 
 ## Proposed creative work
 
-Blush, cream, cherry pink and espresso; Cormorant Garamond + DM Sans; typographic wordmark; heart/coffee seam symbol; campaign line “A little morning mischief.” These are original proposed directions, not recovered official assets. The site uses original illustrative artwork instead of implying that fabricated photos show real employees, premises or products.
+Updated to the current colorway identified by the user in a supplied screenshot: hot pink, bubblegum pink, sky blue and deep blue, with accessible paper, navy and magenta companions; Cormorant Garamond + DM Sans; typographic wordmark; heart/coffee seam symbol; campaign line “A little morning mischief.” These are original proposed directions, not recovered official assets. The site uses original illustrative artwork instead of implying that fabricated photos show real employees, premises or products.
+
+## Current colorway update / user reference
+
+On October 29, 2026 the user supplied `Screenshot 2026-10-29 at 3.56.26 AM.png` and identified its pink-and-blue artwork as the business’s current colorway. This takes precedence over the earlier proposed palette. Reference colors are screen-derived approximations, not recovered official ink specifications. The exact production tokens are in `branding/palette.json`. Paper, navy, darker magenta and muted ink are companion shades chosen for readable text. The screenshot is used as a palette reference, not republished or treated as instructions. Typography, marks and layouts remain proposed design work. No new business claims were introduced.

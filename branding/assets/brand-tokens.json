@@ -1,11 +1,14 @@
 {
   "colors": {
-    "cream": "#FFF8F2",
-    "blush": "#F7DCE4",
-    "cherry-pink": "#C92E64",
-    "espresso": "#34201F",
-    "muted-berry": "#78535E",
-    "border": "#E7CDD2"
+    "paper": "#FFF8FC",
+    "bubblegum": "#F4A4D0",
+    "hot-pink": "#F72796",
+    "sky-blue": "#56ACE2",
+    "deep-blue": "#07569B",
+    "magenta": "#B51469",
+    "navy": "#143860",
+    "muted": "#343B58",
+    "border": "#E8AED0"
   },
   "fonts": {
     "display": "Cormorant Garamond",

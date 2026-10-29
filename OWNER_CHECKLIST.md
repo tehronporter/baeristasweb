@@ -1,6 +1,6 @@
 # Before public launch
 
-- Review proposed feminine/editorial brand direction and campaign line.
+- Review feminine/editorial brand direction and campaign line, now using the supplied current pink-and-blue palette. Confirm exact production color specifications if available.
 - Confirm preferred display name and full business name; supply any existing brand guidelines and logo files.
 - Confirm current operating status and full address for both NW St Helens and NE Sandy.
 - Supply separate current hours, holiday hours, and any relevant visit policies.
