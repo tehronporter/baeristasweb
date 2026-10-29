@@ -1,0 +1,14 @@
+{
+  "colors": {
+    "cream": "#FFF8F2",
+    "blush": "#F7DCE4",
+    "cherry-pink": "#C92E64",
+    "espresso": "#34201F",
+    "muted-berry": "#78535E",
+    "border": "#E7CDD2"
+  },
+  "fonts": {
+    "display": "Cormorant Garamond",
+    "body": "DM Sans"
+  }
+}
