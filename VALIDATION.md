@@ -1,30 +1,25 @@
-# Validation — October 29, 2026
+# Y2K preview validation — October 29, 2026
 
-## Branding PDF
+## Mobile and responsive layout
 
-- Generated 16-page vector PDF using ReportLab with embedded fonts.
-- Rendered every page and inspected a contact sheet.
-- Checked text bounding boxes: no text outside page boundaries.
-- Updated all 16 pages to the current pink-and-blue colorway and inspected refreshed renders.
-- Verified key small-text color pairs: navy/paper, muted/paper, paper/magenta exceed 4.5:1.
+Tested the redesigned website in installed Google Chrome with Playwright at 320, 360, 375, 390, 430, 600, 601, 768, 1024 and 1440 px widths (844 px viewport height).
 
-## Website mockup
+- No horizontal document overflow at any tested width.
+- No browser JavaScript errors or failed HTTP assets.
+- Menu opens; Escape closes and restores toggle focus; selecting a navigation link closes the menu.
+- Contextual mobile visit bar stays hidden over the hero, appears after the hero and hides while location cards are visible. Hidden state is also removed from the tab order and accessibility tree.
+- Mobile opening reviewed at 390×844; full mobile/tablet/desktop pages rendered for visual review.
+- All illustration images explicitly loaded before full-page capture.
+- Normal text uses blue/white (7.46:1) or blue/baby pink (4.75:1). Blue buttons use white labels. Hot pink is for decorative marks and large lettering; no white small-text buttons on pink.
+- Reduced-motion mode disables smooth scrolling and transitions. No continuous animation.
+- Two Maps directions retain the original researched destinations; external routing behavior is not claimed to be phone-tested.
 
-Tested in headless installed Google Chrome using Playwright at 390×1000, 768×1000, and 1440×1000 viewport sizes.
+## Brand kit
 
-- No horizontal page overflow at all three sizes.
-- All local anchor targets exist.
-- Both Maps URLs contain the expected encoded full destination addresses. Destination parameters verified; external Maps navigation not independently tested on a phone.
-- No browser JavaScript errors or HTTP asset failures.
-- Mobile disclosure menu opens and closes, Escape closes it and restores focus, and selecting a navigation link closes it.
-- Rendered and visually inspected desktop, tablet and mobile layouts.
-- Full-page screenshots explicitly load all lazy illustrations before capture.
-- Fonts served locally; no third-party font request required.
-- Reduced-motion CSS disables smooth scrolling and transitions.
-- Website remains a review mockup. No production build pipeline or backend exists, so framework lint/type/build checks are not applicable. Current business facts, real photography and phone-based device behavior need owner review before public launch.
+Rebuilt as a new 12-page guide using Lobster Two Bold Italic and DM Sans, the three-color palette and white. Includes actual responsive preview compositions, logo/sticker treatments, graphic rules, voice, packaging and social examples. Rendered for inspection; fonts embedded. Text bounds checked against page edges.
 
-Initial mockup validation preceded deployment. GitHub Pages publication was subsequently requested by the user.
+## Scope
 
-## Current colorway refresh
+This is an intentionally illustrative preview. Actual company photography and final operational details can be supplied during the production build. No checkout, forms, fabricated menu prices, staff biographies, reviews or open-now status are introduced. Static HTML/CSS/JS requires no framework typecheck or production build.
 
-Repeated responsive browser and navigation checks after recoloring. Key normal-text pairs: navy/paper 11.38:1, muted/paper 10.50:1, muted/bubblegum 5.79:1, navy/sky-blue 4.76:1, paper/magenta 6.14:1. Category labels use navy so they also pass on the blue panel. Focus outlines use navy. Reference hot pink is reserved for artwork/accent use; it is not used as a small-text background. All PDF pages, full-page screenshots and downloadable packages were regenerated.
+GitHub Pages serves the public review from `main:/docs`. Deployment is verified after publication.

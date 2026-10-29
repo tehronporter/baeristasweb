@@ -7,7 +7,9 @@ ROOT=Path(__file__).resolve().parents[2]
 DOCS=['README.md','RESEARCH.md','ASSETS.md','OWNER_CHECKLIST.md','VALIDATION.md']
 pdf=ROOT/'branding/Baeristas_Brand_Kit.pdf'
 p=fitz.open(pdf)
-contact=Image.new('RGB',(2000,1400),'white')
+contact=Image.new('RGB',(2000,350*((len(p)+3)//4)),'white')
+for obsolete in (ROOT/'branding/previews').glob('page-*.png'):
+ obsolete.unlink()
 for i,page in enumerate(p):
  pix=page.get_pixmap(matrix=fitz.Matrix(.5,.5),alpha=False)
  im=Image.frombytes('RGB',[pix.width,pix.height],pix.samples)
@@ -20,7 +22,7 @@ for width in [390,768,1440]:
 out=ROOT/'deliverables';out.mkdir(exist_ok=True)
 shutil.copy2(pdf,out/'Baeristas_Brand_Kit_Current_Colorway.pdf')
 with zipfile.ZipFile(out/'Baeristas_Review_Package_Current_Colorway.zip','w',zipfile.ZIP_DEFLATED) as z:
- for folder in ['branding','website-mockup']:
+ for folder in ['branding','website-mockup','scripts']:
   for file in (ROOT/folder).rglob('*'):
    if file.is_file():z.write(file,file.relative_to(ROOT))
  for file in DOCS:z.write(ROOT/file,file)
@@ -29,4 +31,7 @@ with zipfile.ZipFile(out/'Baeristas_Website_Current_Colorway.zip','w',zipfile.ZI
  for file in (ROOT/'website-mockup').rglob('*'):
   if file.is_file():z.write(file,file.relative_to(ROOT/'website-mockup'))
  z.write(ROOT/'ASSETS.md','ASSETS.md')
-print('PDF, contact sheet, responsive previews, full review ZIP and standalone website ZIP refreshed.')
+shutil.copy2(out/'Baeristas_Brand_Kit_Current_Colorway.pdf',out/'Baeristas_Brand_Kit_Y2K.pdf')
+shutil.copy2(out/'Baeristas_Review_Package_Current_Colorway.zip',out/'Baeristas_Review_Package_Y2K.zip')
+shutil.copy2(out/'Baeristas_Website_Current_Colorway.zip',out/'Baeristas_Website_Y2K.zip')
+print('Y2K PDF, previews, full review ZIP and standalone website ZIP refreshed.')

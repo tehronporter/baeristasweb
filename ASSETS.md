@@ -1,25 +1,23 @@
-# Asset provenance
+# Asset provenance — Y2K direction
 
-All logos, symbols, patterns, layout studies and beverage illustrations in this delivery are newly created concept artwork. No business social photos, magazine photography, employee portraits, competitor assets or stock imagery have been republished.
+The user requested a bubbly, feminine Y2K women’s fashion look and a smaller palette, using the supplied Instagram artwork as a color reference. The current system uses three brand colors: hot pink `#F72796`, baby pink `#F7BEDD`, and blue `#07569B`. White `#FFFFFF` is the sole neutral. Baby pink is a lightened companion to the reference, supporting readable blue text. No additional magenta, navy, berry, cream or sky-blue UI colors remain in the active system. Screen colors are approximations; physical production needs supplier proofs.
 
-## Typography
+## Original design assets
 
-- Cormorant Garamond: https://github.com/google/fonts/tree/main/ofl/cormorantgaramond . Semibold upright and italic instantiated from variable fonts for PDF/browser consistency.
-- DM Sans: https://github.com/google/fonts/tree/main/ofl/dmsans . Regular and Semibold static instances used for body and labels.
-- Both distributed under the SIL Open Font License. Original license files accompany the fonts in `branding/assets/fonts/`. Font copyright and license notices are preserved. Fonts may be used commercially under their license terms.
+- `branding/assets/wordmark-sticker.svg`: proposed outlined script wordmark, white edge and blue offset.
+- `branding/assets/wordmark-{pink,blue,white}.svg`: flat outlined wordmarks, no installed font needed.
+- `branding/assets/heart-*.svg`, `sparkle.svg`, `heart-pattern.svg`: matching vector graphic system. The previous coffee-bean seam motif is retired.
+- `branding/assets/brand-tokens.{css,json}` and `branding/palette.json`: current color/type definitions.
+- `website-mockup/assets/hero-cup.svg`: newly drawn paired-cup composition, orbit, heart, sparkle and capsule sticker.
+- `website-mockup/assets/{espresso,smoothies,spritzers}.svg`: original vector category concepts. They do not represent approved menu recipes, cup production specifications or ingredient claims.
+- Brand guide packaging/social compositions: original vector mockups, not print dielines.
 
-## Files
+No company photography, staff portraits, storefront photos, magazine photos or stock media are republished. No staff or storefront images are fabricated. The supplied screenshot is a reference only; its phone UI and business artwork are not republished.
 
-- `branding/assets/wordmark-*.svg`: outlined proposed wordmarks; no installed font required.
-- `branding/assets/heart-*.svg` and `bean-heart-*.svg`: vector symbols; use plain heart for the smallest sizes.
-- `branding/assets/heart-pattern.svg`: repeating heart concept.
-- `branding/assets/brand-tokens.css` and `.json`: reusable colors/type references. `branding/palette.json` is the shared source of truth.
-- `website-mockup/assets/hero-cup.svg`: original vector cup concept with lighting/shadow effects.
-- `website-mockup/assets/{espresso,smoothies,spritzers}.svg`: original illustrative category graphics. Not evidence of actual recipes, cup designs, ingredients or menu items.
-- Brand PDF packaging and social examples: original programmatically drawn vector concept compositions; not manufacturing-ready files.
+## Fonts and licensing
 
-RGB colors are intended for screens. Supplier-specific print profiles, dielines and physical proofs are needed for production packaging. No formal logo/trademark clearance was performed.
+- **Lobster Two Bold Italic**, 700: proposed wordmark and script accent. Source: https://github.com/google/fonts/tree/main/ofl/lobstertwo .
+- **DM Sans**, 400 / 600 / 900: body, labels, and bold headings. Black is visually italicized in CSS for headline styling. Source: https://github.com/google/fonts/tree/main/ofl/dmsans .
+- Both use the SIL Open Font License. Original font copyrights and license text are included with brand files and the standalone website assets.
 
-## Updated color provenance
-
-The user-provided screenshot identifies the current pink-and-blue colorway. New tokens interpret that reference: hot pink `#F72796`, bubblegum `#F4A4D0`, sky blue `#56ACE2`, deep blue `#07569B`. Paper `#FFF8FC`, magenta `#B51469`, navy `#143860`, muted ink `#343B58` and border `#E8AED0` are supporting shades. These screen approximations need a print proof for physical production. No screenshot UI or cropped business artwork is reused in the public website. Espresso drink fill retains natural coffee coloring; all cup branding, UI, layouts and graphic assets use the updated system.
+All public website fonts are local. The SVG wordmarks and cup graphics contain outlined lettering. Source font files are included for editable design work. Typography and logo treatments remain proposals, with no formal trademark clearance claimed.

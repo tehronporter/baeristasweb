@@ -1,24 +1,25 @@
+"""Original vector product/sticker concepts using the three brand colors + white."""
 from pathlib import Path
+from fontTools.ttLib import TTFont
+from fontTools.pens.svgPathPen import SVGPathPen
+from fontTools.pens.transformPen import TransformPen
+import json
 A=Path(__file__).parent
-svg='''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 740" fill="none">
-<defs><linearGradient id="bg" x2=".9" y2="1"><stop stop-color="#F4A4D0"/><stop offset="1" stop-color="#F47BC2"/></linearGradient><linearGradient id="cup" x1=".1" x2="1"><stop stop-color="#FFF8FC"/><stop offset=".4" stop-color="#FFFFFF"/><stop offset="1" stop-color="#EBC6E0"/></linearGradient><linearGradient id="sleeve" x2="1"><stop stop-color="#E91A86"/><stop offset=".4" stop-color="#F72796"/><stop offset="1" stop-color="#C51473"/></linearGradient><linearGradient id="lid" x2="1"><stop stop-color="#143860"/><stop offset=".4" stop-color="#07569B"/><stop offset="1" stop-color="#063C72"/></linearGradient><filter id="shadow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="14"/></filter></defs>
-<rect x="28" y="18" width="594" height="694" rx="280" fill="url(#bg)"/>
-<ellipse cx="339" cy="614" rx="164" ry="25" fill="#07569B" opacity=".2" filter="url(#shadow)"/>
-<path d="M90 560C155 500 197 596 253 573" stroke="#FFF8FC" opacity=".6" stroke-width="2"/>
-<g transform="translate(335 359) rotate(12)">
-<path d="M-125-160H125L89 218Q0 249-89 218Z" fill="url(#cup)"/>
-<path d="M-115-61H115L102 99Q0 126-102 99Z" fill="url(#sleeve)"/>
-<rect x="-143" y="-177" width="286" height="30" rx="12" fill="url(#lid)"/>
-<path d="M-119-178L-108-192H108L119-178" fill="url(#lid)"/>
-<path d="M-128-165H128" stroke="#56ACE2" stroke-width="2" opacity=".6"/>
-<text x="0" y="28" font-family="Georgia,serif" font-size="47" font-style="italic" text-anchor="middle" fill="#FFF8FC">Baeristas</text>
-<text x="0" y="56" font-family="Arial,sans-serif" font-size="7.7" letter-spacing="1.3" text-anchor="middle" fill="#FFF8FC">A LITTLE MORNING MISCHIEF.</text>
-<path d="M-75 150Q-18 163 38 156" stroke="#E8AED0" stroke-width="1"/>
-</g>
-<g transform="translate(487 139) rotate(12)"><path d="M22 41C13 33 0 22 0 12C0 0 15-4 22 6C30-4 44 0 44 12C44 22 30 33 22 41" fill="#B51469"/></g>
-<path d="M100 226V260M83 243H117" stroke="#B51469" stroke-width="2"/><circle cx="511" cy="555" r="5" fill="#FFF8FC"/>
-</svg>'''
-(A/'hero-cup.svg').write_text(svg)
-for kind,c1,c2 in [('espresso','#C59A79','#634132'),('smoothies','#F4A4D0','#F72796'),('spritzers','#8BCCF0','#56ACE2')]:
- s=f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 480"><defs><linearGradient id="drink" x2="0.7" y2="1"><stop stop-color="{c1}"/><stop offset="1" stop-color="{c2}"/></linearGradient><linearGradient id="glass"><stop stop-color="#FFFFFF" stop-opacity=".6"/><stop offset=".4" stop-color="#FFFFFF" stop-opacity="0"/><stop offset="1" stop-color="#FFFFFF" stop-opacity=".3"/></linearGradient><filter id="s"><feGaussianBlur stdDeviation="9"/></filter></defs><ellipse cx="250" cy="410" rx="110" ry="17" fill="#07569B" opacity=".15" filter="url(#s)"/><g transform="translate(250 230) rotate(-9)"><path d="M-87-129H87L67 158Q0 176-67 158Z" fill="url(#drink)"/><path d="M-87-129H87L67 158Q0 176-67 158Z" fill="url(#glass)" stroke="#FFF8FC" stroke-opacity=".6" stroke-width="2"/><ellipse cy="-128" rx="87" ry="15" fill="{c1}"/><rect x="-94" y="-143" width="188" height="19" rx="9" fill="#FFF8FC" fill-opacity=".75"/><path d="M27-136L49-224" stroke="#B51469" stroke-width="10"/><path d="M-74-12H74L68 89Q0 106-68 89Z" fill="#FFF8FC"/><path d="M0 61C-10 53-31 40-31 25C-31 8-10 3 0 17C10 3 31 8 31 25C31 40 10 53 0 61" fill="#B51469"/></g></svg>'''
- (A/f'{kind}.svg').write_text(s)
+P=json.loads((A.parents[1]/'branding/palette.json').read_text())['colors']
+F=TTFont(A/'LobsterTwo-BoldItalic.ttf');gs=F.getGlyphSet();cm=F.getBestCmap();pen=SVGPathPen(gs);advance=0
+for ch in 'Baeristas':
+ gn=cm[ord(ch)];gs[gn].draw(TransformPen(pen,(1,0,0,1,advance,0)));advance+=F['hmtx'][gn][0]
+logo=pen.getCommands()
+blue=P['blue'];pink=P['hot-pink'];baby=P['baby-pink']
+def word(y,col):return f'<g transform="translate(-86 {y}) scale({172/advance} {-172/advance})"><path d="{logo}" fill="{col}"/></g>'
+def cup(body,sleeve,logoColor,tilt,x,y,scale=1):
+ return f'''<g transform="translate({x} {y}) rotate({tilt}) scale({scale})"><path d="M-106-139H106L77 171Q0 193-77 171Z" fill="{body}" stroke="{blue}" stroke-width="2"/><path d="M-99-64H99L87 69Q0 85-87 69Z" fill="{sleeve}"/>{word(21,logoColor)}<path d="M-104-149L-93-163H93L104-149Z" fill="{blue}"/><rect x="-117" y="-149" width="234" height="23" rx="8" fill="{blue}"/><path d="M-100-140H100" stroke="white" opacity=".45"/><path d="M-79 98L-73 153" stroke="white" stroke-width="4" opacity=".6"/></g>'''
+def star(x,y,size,col='white'):
+ return f'<path transform="translate({x} {y}) scale({size/100})" d="M50 0Q54 45 100 50Q54 55 50 100Q46 55 0 50Q46 45 50 0Z" fill="{col}" stroke="{blue}" stroke-width="2"/>'
+hero=f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 560"><defs><radialGradient id="glow"><stop stop-color="white" stop-opacity=".85"/><stop offset="1" stop-color="white" stop-opacity="0"/></radialGradient></defs><ellipse cx="302" cy="287" rx="260" ry="238" fill="url(#glow)"/><ellipse cx="300" cy="305" rx="274" ry="92" fill="none" stroke="{blue}" stroke-width="1.5" transform="rotate(-25 300 305)"/>{star(44,94,62)}{star(483,365,64)}{star(438,35,38,pink)}<ellipse cx="300" cy="486" rx="178" ry="14" fill="{blue}" opacity=".12"/>{cup('white',pink,'white',-14,211,292,.94)}{cup(baby,'white',blue,14,397,279,1.04)}<path d="M120 430C104 417 79 401 79 383C79 362 105 355 120 372C135 355 161 362 161 383C161 401 136 417 120 430Z" fill="{pink}" stroke="white" stroke-width="5"/><g transform="translate(376 447) rotate(-9)"><rect x="-96" y="-27" width="192" height="54" rx="27" fill="white" stroke="{blue}" stroke-width="2"/><text text-anchor="middle" y="5" font-family="Arial,sans-serif" font-size="13" font-weight="bold" letter-spacing="1" fill="{blue}">COFFEE + CHEMISTRY</text></g></svg>'''
+(A/'hero-cup.svg').write_text(hero)
+for name,tilt in [('espresso',-12),('smoothies',10),('spritzers',-8)]:
+ body='white' if name!='smoothies' else baby;sleeve=pink if name!='spritzers' else blue
+ graphic=f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360">{star(255,32,44)}{star(34,239,27,pink)}{cup(body,sleeve,"white",tilt,177,178,.79)}</svg>'
+ (A/f'{name}.svg').write_text(graphic)
+print('Y2K drink illustrations refreshed.')

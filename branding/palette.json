@@ -1,14 +1,9 @@
 {
-  "source": "User-supplied screenshot, October 29, 2026. Screen-derived approximations; accessible companion shades added.",
+  "source": "Three-color Y2K interpretation of the user's Instagram artwork: hot pink, baby pink, blue. White is the only neutral. Screen approximations.",
   "colors": {
-    "paper": "#FFF8FC",
-    "bubblegum": "#F4A4D0",
     "hot-pink": "#F72796",
-    "sky-blue": "#56ACE2",
-    "deep-blue": "#07569B",
-    "magenta": "#B51469",
-    "navy": "#143860",
-    "muted": "#343B58",
-    "border": "#E8AED0"
+    "baby-pink": "#F7BEDD",
+    "blue": "#07569B",
+    "white": "#FFFFFF"
   }
 }

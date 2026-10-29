@@ -8,6 +8,8 @@ dest.mkdir(exist_ok=True)
 for name in ['index.html','style.css','script.js']:
  shutil.copy2(source/name,dest/name)
 assets=dest/'assets';assets.mkdir(exist_ok=True)
+for obsolete in assets.iterdir():
+ if obsolete.is_file():obsolete.unlink()
 for file in (source/'assets').iterdir():
  if file.suffix in ['.svg','.ttf','.txt']:
   shutil.copy2(file,assets/file.name)

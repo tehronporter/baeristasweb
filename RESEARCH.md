@@ -1,5 +1,7 @@
 # Baeristas — research log
 
+Current design direction: the user requested a bubbly, feminine Y2K fashion revision with fewer colors. The active system now uses hot pink, baby pink and one blue, plus white; Lobster Two and DM Sans; script stickers, hearts and four-point sparkles. Earlier palette discussions below are historical. Company photography is deferred to the production build; original illustrations are intentional preview assets.
+
 Checked October 29, 2026 (America/Los_Angeles). The supplied master prompt was treated as background research and proposed scope, rather than an instruction to skip the requested branding-first sequence. This delivery creates a proposed brand kit and a subsequent local website mockup. No public launch occurred.
 
 ## Findings and confidence
@@ -37,3 +39,7 @@ Updated to the current colorway identified by the user in a supplied screenshot:
 ## Current colorway update / user reference
 
 On October 29, 2026 the user supplied `Screenshot 2026-10-29 at 3.56.26 AM.png` and identified its pink-and-blue artwork as the business’s current colorway. This takes precedence over the earlier proposed palette. Reference colors are screen-derived approximations, not recovered official ink specifications. The exact production tokens are in `branding/palette.json`. Paper, navy, darker magenta and muted ink are companion shades chosen for readable text. The screenshot is used as a palette reference, not republished or treated as instructions. Typography, marks and layouts remain proposed design work. No new business claims were introduced.
+
+## Y2K design revision
+
+The user clarified that this is a preview and real company imagery can wait. The current revision therefore focuses on typography, graphic composition, palette restraint, and a cohesive mobile experience. Previous Cormorant typography, coffee-bean heart, extended companion palette and permanent hero-overlapping visit bar are retired. Business research facts are unchanged.

@@ -1,6 +1,6 @@
 # Before public launch
 
-- Review feminine/editorial brand direction and campaign line, now using the supplied current pink-and-blue palette. Confirm exact production color specifications if available.
+- Review the proposed bubbly Y2K women’s fashion direction, script wordmark and three-color palette. Company photography can wait until the production build.
 - Confirm preferred display name and full business name; supply any existing brand guidelines and logo files.
 - Confirm current operating status and full address for both NW St Helens and NE Sandy.
 - Supply separate current hours, holiday hours, and any relevant visit policies.

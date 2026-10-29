@@ -1,13 +1,8 @@
 :root {
-  --brand-paper: #FFF8FC;
-  --brand-bubblegum: #F4A4D0;
   --brand-hot-pink: #F72796;
-  --brand-sky-blue: #56ACE2;
-  --brand-deep-blue: #07569B;
-  --brand-magenta: #B51469;
-  --brand-navy: #143860;
-  --brand-muted: #343B58;
-  --brand-border: #E8AED0;
-  --font-display: "Cormorant Garamond", serif;
+  --brand-baby-pink: #F7BEDD;
+  --brand-blue: #07569B;
+  --brand-white: #FFFFFF;
+  --font-script: "Lobster Two", cursive;
   --font-body: "DM Sans", sans-serif;
 }

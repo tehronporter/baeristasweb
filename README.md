@@ -1,44 +1,41 @@
-# Baeristas — proposed branding and website mockup
+# Baeristas — bubbly Y2K preview
 
-The work follows the requested order: research, a refreshed branding kit PDF, then a local responsive website mockup. The visual system now follows the user-supplied current hot-pink, bubblegum-pink, sky-blue and deep-blue colorway. Typography and logo treatments remain proposals rather than an existing official brand manual.
+A feminine Y2K fashion direction with plump script, bold italic headlines, outlined stickers, and a tightly controlled palette: hot pink, baby pink, blue, and white. This is a design preview; original vector cups intentionally stand in for company photography until the real build.
 
-## Review
+Live review: https://tehronporter.github.io/baeristasweb/
 
-1. `branding/Baeristas_Brand_Kit.pdf` — 16-page branding kit.
-2. `branding/previews/contact-sheet.jpg` — overview of all brand pages.
-3. `website-mockup/index.html` — local responsive website mockup. Open directly in a browser, or serve as below.
-4. `website-mockup/previews/1440.png`, `768.png`, `390.png` — rendered desktop/tablet/mobile views.
+## Review files
 
-## Run the mockup
+- `branding/Baeristas_Brand_Kit.pdf`: revised 12-page brand kit, including mobile/desktop applications.
+- `branding/previews/contact-sheet.jpg`: all 12 pages at a glance.
+- `website-mockup/index.html`: responsive website source.
+- `website-mockup/previews/mobile-first-screen.png`: mobile opening at 390×844.
+- `website-mockup/previews/{390,768,1440}.png`: full-page device previews.
+- `branding/assets/`: proposed script/sticker wordmarks, hearts, sparkle, pattern, tokens, fonts and licenses.
+- `branding/palette.json`: three brand colors and white.
+
+## Run locally
 
 ```sh
 python3 -m http.server 4173 --bind 127.0.0.1 --directory website-mockup
 ```
 
-Open http://127.0.0.1:4173 . No install/build step, API keys, or online font service required. The mockup intentionally uses simple HTML/CSS/JS rather than a production framework; the supplied document's Next.js instructions are background for a later implementation, not necessary for a visual mockup.
+Open http://127.0.0.1:4173 . No build, package installation, external font service or API key is needed.
 
-## Edit
+## Edit and publish
 
-- `website-mockup/index.html`: copy, locations, links and page structure.
-- `website-mockup/style.css`: brand colors, type, responsive layout.
-- `website-mockup/script.js`: mobile navigation and keyboard behavior.
-- `branding/assets/`: reusable vector artwork, tokens and font files/licenses.
-- `branding/source/build_brandkit.py`: editable PDF source. Requires Python `reportlab`.
-- `branding/source/export_assets.py`: vector/font-outline asset generator. Requires Python `fonttools`.
-- `website-mockup/assets/make_illustrations.py`: editable SVG illustration source.
+- `website-mockup/index.html`: copy and layout structure.
+- `website-mockup/style.css`: palette, typography and mobile-first composition.
+- `website-mockup/script.js`: mobile menu and contextual visit bar.
+- `website-mockup/assets/make_illustrations.py`: vector cup artwork source.
+- `branding/source/build_brandkit.py`: editable PDF source (ReportLab).
+- `branding/source/export_assets.py`: outlined logo assets and tokens (fontTools).
+- `branding/source/package_review.py`: PDF page previews and downloadable ZIPs (Pillow, PyMuPDF).
 
-## Scope and facts
+GitHub Pages serves `main:/docs`. After website changes run `python3 scripts/prepare_pages.py`, commit the refreshed source and `docs/`, then push `main`. Brand-guide source and internal research are kept outside the Pages document root. The page remains excluded from search indexing while business details await confirmation.
 
-The website includes drink categories, brand story, both reported stands and real Maps directions URLs. Menu products/prices, reviews, opening hours, ordering links, contact details and unresolved social links are not invented. NE details need owner confirmation. Illustrations are visibly conceptual and a short drinks note makes that explicit. Preview is excluded from search indexing. No production structured data or canonical domain is guessed.
+## Preview behavior
 
-See `RESEARCH.md`, `ASSETS.md`, `OWNER_CHECKLIST.md` and `VALIDATION.md`. The review website is published using GitHub Pages from `main:/docs`.
+The visit bar is hidden over the hero and while location cards are visible. It appears between those sections on phones, with consistent blue-and-white styling. Drink cards use compact horizontal layouts on phones. All normal text uses blue on white/baby pink, or white on blue. Pink lettering is reserved for large graphic statements and proposed wordmarks.
 
-## Current palette update
-
-All PDF pages, logos, symbols, patterns, packaging/social concepts, website illustrations, browser theme color, responsive previews and review downloads have been regenerated with the reference colorway. Color tokens and provenance live in `branding/palette.json` and `ASSETS.md`. The site is a public review mockup on GitHub Pages.
-
-## GitHub Pages
-
-Public review URL: https://tehronporter.github.io/baeristasweb/
-
-GitHub Pages serves `main:/docs`. After changing `website-mockup/`, run `python3 scripts/prepare_pages.py`, commit the refreshed `docs/` files and push `main`. The public source contains only website HTML, CSS, JavaScript, illustrations, fonts and their licenses. Research notes and project source are not part of the Pages site. The noindex setting remains enabled while business details await final confirmation.
+No fictional prices, reviews, employees, schedules, recipes, order endpoints or contact details are added. The two directions links use researched addresses; operating details still require owner confirmation. See `RESEARCH.md`, `ASSETS.md`, `OWNER_CHECKLIST.md`, and `VALIDATION.md`.

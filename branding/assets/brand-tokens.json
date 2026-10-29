@@ -1,17 +1,13 @@
 {
   "colors": {
-    "paper": "#FFF8FC",
-    "bubblegum": "#F4A4D0",
     "hot-pink": "#F72796",
-    "sky-blue": "#56ACE2",
-    "deep-blue": "#07569B",
-    "magenta": "#B51469",
-    "navy": "#143860",
-    "muted": "#343B58",
-    "border": "#E8AED0"
+    "baby-pink": "#F7BEDD",
+    "blue": "#07569B",
+    "white": "#FFFFFF"
   },
   "fonts": {
-    "display": "Cormorant Garamond",
-    "body": "DM Sans"
+    "script": "Lobster Two Bold Italic",
+    "body": "DM Sans",
+    "headline": "DM Sans Black Italic"
   }
 }
