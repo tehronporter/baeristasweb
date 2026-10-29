@@ -31,8 +31,14 @@ Open http://127.0.0.1:4173 . No install/build step, API keys, or online font ser
 
 The website includes drink categories, brand story, both reported stands and real Maps directions URLs. Menu products/prices, reviews, opening hours, ordering links, contact details and unresolved social links are not invented. NE details need owner confirmation. Illustrations are visibly conceptual and a short drinks note makes that explicit. Preview is excluded from search indexing. No production structured data or canonical domain is guessed.
 
-See `RESEARCH.md`, `ASSETS.md`, `OWNER_CHECKLIST.md` and `VALIDATION.md`. No site was registered or deployed.
+See `RESEARCH.md`, `ASSETS.md`, `OWNER_CHECKLIST.md` and `VALIDATION.md`. The review website is published using GitHub Pages from `main:/docs`.
 
 ## Current palette update
 
-All PDF pages, logos, symbols, patterns, packaging/social concepts, website illustrations, browser theme color, responsive previews and review downloads have been regenerated with the reference colorway. Color tokens and provenance live in `branding/palette.json` and `ASSETS.md`. The site remains an unpublished mockup.
+All PDF pages, logos, symbols, patterns, packaging/social concepts, website illustrations, browser theme color, responsive previews and review downloads have been regenerated with the reference colorway. Color tokens and provenance live in `branding/palette.json` and `ASSETS.md`. The site is a public review mockup on GitHub Pages.
+
+## GitHub Pages
+
+Public review URL: https://tehronporter.github.io/baeristasweb/
+
+GitHub Pages serves `main:/docs`. After changing `website-mockup/`, run `python3 scripts/prepare_pages.py`, commit the refreshed `docs/` files and push `main`. The public source contains only website HTML, CSS, JavaScript, illustrations, fonts and their licenses. Research notes and project source are not part of the Pages site. The noindex setting remains enabled while business details await final confirmation.

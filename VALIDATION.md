@@ -23,7 +23,7 @@ Tested in headless installed Google Chrome using Playwright at 390×1000, 768×1
 - Reduced-motion CSS disables smooth scrolling and transitions.
 - Website remains a review mockup. No production build pipeline or backend exists, so framework lint/type/build checks are not applicable. Current business facts, real photography and phone-based device behavior need owner review before public launch.
 
-No public deployment was performed.
+Initial mockup validation preceded deployment. GitHub Pages publication was subsequently requested by the user.
 
 ## Current colorway refresh
 
